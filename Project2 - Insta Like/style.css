@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html , body {
+    height: 100%;
+    width: 100%;
+}
+
+/* custom cursor which is acting upon body tag an all its elemets*/
+
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: cornflowerblue;
+    overflow: hidden;
+    cursor: none;
+}
+
+h2{
+    color: white;
+    margin-bottom: 15px;
+}
+
+#container{
+    position: relative;
+    height: 500px;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* logo of heart from remix-font we used */
+
+/* this tag takes position in realtive to container tag */
+
+#container i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    color: white;
+    font-size: 90px;
+    transition: transform ease 0.3s;
+}
+
+
+/* Next part - > Custom cursor */
+
+#cursor{
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    background-color: blueviolet;
+    mix-blend-mode: soft-light;
+    border-radius: 50%;
+    transition: all ease 0.1;
+    z-index: 1;
+}
